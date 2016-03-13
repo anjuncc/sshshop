@@ -10,4 +10,5 @@
 		scope="prototype" parent="baseAction" />
 	<bean id="accountAction" class="a.j.shop.action.AccountAction"
 		scope="prototype" parent="baseAction" />
+	<bean id="sendAction" class="a.j.shop.action.SendAction"/>
 </beans>

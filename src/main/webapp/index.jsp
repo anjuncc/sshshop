@@ -1,5 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
@@ -17,7 +17,7 @@
 </head>
 
 <body>
-	<a href="category_update.action?category.id=1&category.type=test">update</a>
+	<a href="account_aindex.action">直接到后台</a>
 	<a href="category_update.action?id=1&type=test">update model</a>
 	<a href="category_save.action">save</a>
 	<a href="category_query.action">category查询所有类别</a>
