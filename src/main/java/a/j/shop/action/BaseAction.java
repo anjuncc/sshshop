@@ -16,25 +16,39 @@ import a.j.shop.service.CategoryService;
 
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
+
 @Controller
 @Scope("prototype")
 public class BaseAction<T> extends ActionSupport implements RequestAware,
 		SessionAware, ApplicationAware, ModelDriven<T> {
-
-	protected Map<String, Object> request;
-	protected Map<String, Object> session;
-	protected Map<String, Object> application;
 	protected T model;
+	protected Integer page;
+	protected Integer rows;
+	protected Map<String,Object> pageMap = null;
 	@Resource
 	protected CategoryService categoryService;
 	@Resource
 	protected AccountService accountService;
-//	public void setCategoryService(CategoryService categoryService) {
-//		this.categoryService = categoryService;
-//	}
-//	public void setAccountService(AccountService accountService) {
-//		this.accountService = accountService;
-//	}
+	
+	public Integer getPage() {
+		return page;
+	}
+
+	public void setPage(Integer page) {
+		this.page = page;
+	}
+
+	public Integer getRows() {
+		return rows;
+	}
+
+	public void setRows(Integer rows) {
+		this.rows = rows;
+	}
+
+	protected Map<String, Object> request;
+	protected Map<String, Object> session;
+	protected Map<String, Object> application;
 
 	@Override
 	public T getModel() {
@@ -62,6 +76,10 @@ public class BaseAction<T> extends ActionSupport implements RequestAware,
 	@Override
 	public void setRequest(Map<String, Object> arg0) {
 		this.request = arg0;
+	}
+
+	public Map<String,Object> getPageMap() {
+		return pageMap;
 	}
 
 }

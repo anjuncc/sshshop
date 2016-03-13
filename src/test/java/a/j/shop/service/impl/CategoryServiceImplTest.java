@@ -21,7 +21,7 @@ public class CategoryServiceImplTest {
 	@Resource
 	CategoryService categoryService;
 
-	@Test
+//	@Test
 	public final void testSave() {
 		categoryService.save(new Category("测试save",true));
 	}
@@ -50,7 +50,10 @@ public class CategoryServiceImplTest {
 			System.out.println(c.getAccount());
 		}
 	}
-	
+	@Test
+	public final void getCount() {
+		System.out.println(categoryService.getCount(""));
+	}
 //	@Test
 	public final void testDelete() {
 		categoryService.delete(3);
