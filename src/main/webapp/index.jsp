@@ -17,7 +17,8 @@
 </head>
 
 <body>
-	<a href="account_aindex.action">直接到后台</a>
+	<a href="send_main_aindex.action">直接到后台</a>
+	<a href="send_main_index.action">直接到后台div</a>
 	<a href="category_update.action?id=1&type=test">update model</a>
 	<a href="category_save.action">save</a>
 	<a href="category_query.action">category查询所有类别</a>

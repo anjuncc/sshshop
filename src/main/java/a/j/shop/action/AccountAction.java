@@ -9,9 +9,6 @@ import a.j.shop.service.CategoryService;
 
 public class AccountAction extends BaseAction<Account> {
 
-	public String aindex(){
-		return "aindex";
-	}
 
 	public String update() {
 		System.out.println("___update-------");
