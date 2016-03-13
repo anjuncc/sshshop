@@ -3,22 +3,28 @@ package a.j.shop.service.impl;
 import java.lang.reflect.ParameterizedType;
 import java.util.List;
 
+import javax.annotation.Resource;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.springframework.context.annotation.Lazy;
+import org.springframework.stereotype.Service;
 
 import a.j.shop.service.BaseService;
 
+@SuppressWarnings("unchecked")
+@Service("baseServie")
+@Lazy(true)
 public class BaseServiceImpl<T> implements BaseService<T> {
-
+	@Resource
 	private SessionFactory sessionFactory;
 
-	public void setSessionFactory(SessionFactory sessionFactory) {
-		this.sessionFactory = sessionFactory;
-	}
+//	public void setSessionFactory(SessionFactory sessionFactory) {
+//		this.sessionFactory = sessionFactory;
+//	}
 
 	private Class<T> clazz;
-
-	@SuppressWarnings("unchecked")
+	
 	public BaseServiceImpl() {
 		System.out.println("this代表当前调用构造方法的对象:" + this);
 		System.out.println("this parent:" + this.getClass().getSuperclass());

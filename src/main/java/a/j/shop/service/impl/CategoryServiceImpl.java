@@ -1,15 +1,10 @@
 package a.j.shop.service.impl;
 
-import java.util.List;
-
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
+import org.springframework.stereotype.Service;
 
 import a.j.shop.model.Category;
 import a.j.shop.service.CategoryService;
-import a.j.shop.utils.HibernateSessionFactory;
-
+@Service("categoryService")
 public class CategoryServiceImpl extends BaseServiceImpl<Category> implements CategoryService {
 	 public CategoryServiceImpl(){
 		super();

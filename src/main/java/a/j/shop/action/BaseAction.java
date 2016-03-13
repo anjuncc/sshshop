@@ -3,16 +3,21 @@ package a.j.shop.action;
 import java.lang.reflect.ParameterizedType;
 import java.util.Map;
 
+import javax.annotation.Resource;
+
 import org.apache.struts2.interceptor.ApplicationAware;
 import org.apache.struts2.interceptor.RequestAware;
 import org.apache.struts2.interceptor.SessionAware;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Controller;
 
 import a.j.shop.service.AccountService;
 import a.j.shop.service.CategoryService;
 
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
-
+@Controller
+@Scope("prototype")
 public class BaseAction<T> extends ActionSupport implements RequestAware,
 		SessionAware, ApplicationAware, ModelDriven<T> {
 
@@ -20,14 +25,16 @@ public class BaseAction<T> extends ActionSupport implements RequestAware,
 	protected Map<String, Object> session;
 	protected Map<String, Object> application;
 	protected T model;
+	@Resource
 	protected CategoryService categoryService;
+	@Resource
 	protected AccountService accountService;
-	public void setCategoryService(CategoryService categoryService) {
-		this.categoryService = categoryService;
-	}
-	public void setAccountService(AccountService accountService) {
-		this.accountService = accountService;
-	}
+//	public void setCategoryService(CategoryService categoryService) {
+//		this.categoryService = categoryService;
+//	}
+//	public void setAccountService(AccountService accountService) {
+//		this.accountService = accountService;
+//	}
 
 	@Override
 	public T getModel() {

@@ -2,7 +2,7 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-	<bean id="baseAction" class="a.j.shop.action.BaseAction" scope="prototype" >
+<!-- 	<bean id="baseAction" class="a.j.shop.action.BaseAction" scope="prototype" >
 		<property name="categoryService" ref="categoryService"/>
 		<property name="accountService" ref="accountService"></property>
 	</bean>
@@ -10,5 +10,5 @@
 		scope="prototype" parent="baseAction" />
 	<bean id="accountAction" class="a.j.shop.action.AccountAction"
 		scope="prototype" parent="baseAction" />
-	<bean id="sendAction" class="a.j.shop.action.SendAction"/>
+	<bean id="sendAction" class="a.j.shop.action.SendAction"/>  -->
 </beans>

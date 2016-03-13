@@ -1,11 +1,15 @@
 package a.j.shop.action;
 
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Controller;
+
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ModelDriven;
 
 import a.j.shop.model.Category;
 import a.j.shop.service.CategoryService;
-
+@Controller
+@Scope("prototype")
 public class CategoryAction extends BaseAction<Category> {
 
 
