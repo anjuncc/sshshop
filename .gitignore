@@ -1,0 +1,5 @@
+.classpath
+.git
+.gitignore.swp
+.myhibernatedata
+target
