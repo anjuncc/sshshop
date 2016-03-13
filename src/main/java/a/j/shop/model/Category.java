@@ -12,6 +12,7 @@ public class Category implements java.io.Serializable {
 	private String type;
 	private Boolean hot;
 
+	private Account account;
 	// Constructors
 
 	/** default constructor */
@@ -57,6 +58,14 @@ public class Category implements java.io.Serializable {
 	@Override
 	public String toString() {
 		return "Category [id=" + id + ", type=" + type + ", hot=" + hot + "]";
+	}
+
+	public Account getAccount() {
+		return account;
+	}
+
+	public void setAccount(Account account) {
+		this.account = account;
 	}
 
 }

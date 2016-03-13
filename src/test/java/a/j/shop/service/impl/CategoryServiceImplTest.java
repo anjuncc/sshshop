@@ -44,6 +44,14 @@ public class CategoryServiceImplTest {
 		}
 	}
 	@Test
+	public final void testQueryJoinAccount() {
+		for(Category c:categoryService.queryJoinAccount("",1,1)){
+			System.out.println(c);
+			System.out.println(c.getAccount());
+		}
+	}
+	
+//	@Test
 	public final void testDelete() {
 		categoryService.delete(3);
 	}
