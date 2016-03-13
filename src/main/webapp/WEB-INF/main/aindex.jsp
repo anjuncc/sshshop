@@ -42,7 +42,7 @@
 				$("#tt").tabs("add", {
 					title :text,
 					closable:true,
-					content:'<iframe src="send_category_query.action"   frameborder="0" style="padding: 0px; width: 100%; height: 1000px;"/>'
+					content:'<iframe src="send_category_query.action"   frameborder="0" style="padding: 0px; width: 100%; height: 100%;"/>'
 					/* href:"send_category_query.action" */
 				})
 			}

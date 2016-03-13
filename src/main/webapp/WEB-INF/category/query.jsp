@@ -12,11 +12,27 @@ body {
 	$(function() {
 		$('#dg').datagrid({
 			url : 'datagrid_data.json',
-			columns : [ [ {
+			loadMsg : '请等待...',
+			striped : true,
+			nowrap : true,
+			singleSelect : true,
+			pagination : true,
+			rownumbers:true,
+			/* 	rowStyler : function(index, row) {
+					if(index%2==0){
+						return 'background-color:#6293bb;'
+					}
+				}, */
+
+			frozenColumns : [ [ {
+				field : 'a',
+				checkbox : true
+			}, {
 				field : 'code',
 				title : '编号',
 				width : 50
-			}, {
+			} ] ],
+			columns : [ [ {
 				field : 'name',
 				title : '名称',
 				width : 50
@@ -27,14 +43,15 @@ body {
 				align : 'right'
 			} ] ]
 		});
-
+	
 	})
 </script>
 
 </head>
 
 <body>
-<table id="dg">
-</table>
+	<table id="dg">
+	</table>
+
 </body>
 </html>
